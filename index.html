@@ -2,173 +2,452 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>18 Days Until Your 18th ❤️</title>
+    <title>18 Years of Srinidhi ❤️</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <!-- Floating Hearts -->
-    <div class="hearts"></div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- =====================================
+         OPENING SURPRISE SCREEN
+    ====================================== -->
 
-        <div class="hero-content">
+    <section class="welcome-screen" id="welcomeScreen">
 
-            <p class="small-title">A little surprise for you...</p>
+        <div class="welcome-card">
 
-            <h1>18 Days</h1>
-
-            <h2>Until Your 18th Birthday 🎂</h2>
-
-            <p class="intro">
-                I wanted to make your 18th birthday a little more
-                special, so here's something made just for you. ❤️
-            </p>
-
-            <!-- COUNTDOWN -->
-            <div class="countdown">
-
-                <div class="time-box">
-                    <span id="days">00</span>
-                    <small>Days</small>
-                </div>
-
-                <div class="time-box">
-                    <span id="hours">00</span>
-                    <small>Hours</small>
-                </div>
-
-                <div class="time-box">
-                    <span id="minutes">00</span>
-                    <small>Minutes</small>
-                </div>
-
-                <div class="time-box">
-                    <span id="seconds">00</span>
-                    <small>Seconds</small>
-                </div>
-
+            <div class="welcome-heart">
+                💌
             </div>
 
-            <p class="date">
-                🎀 October 18, 2026 🎀
+            <p class="welcome-small">
+                Srindhi, I have something for you...
             </p>
 
-        </div>
+            <h1>
+                18 Years of You
+            </h1>
 
-    </section>
+            <p class="welcome-text">
 
+                This isn't just a countdown.
 
-    <!-- DAILY MESSAGE -->
+                <br><br>
 
-    <section class="daily-section">
+                For the next 18 days,
+                we're going back through
+                <strong>18 years</strong> of your life...
 
-        <h2>💌 Today's Little Message</h2>
+                <br><br>
 
-        <div class="message-card">
+                One birthday at a time. 🎂
 
-            <div id="dayNumber"></div>
-
-            <p id="dailyMessage">
-                Loading your message...
             </p>
 
-        </div>
-
-    </section>
-
-
-    <!-- MEMORIES -->
-
-    <!-- =========================
-     MEMORIES
-========================= -->
-
-    <section class="memories">
-
-        <h2>📸 A Few Memories to Remember</h2>
-
-        <p class="section-subtitle">
-            Always special ❤️
-        </p>
-
-        <div class="memory-counter">
-            <span id="memoryCount">0</span> / 36 memories unlocked
-        </div>
-
-        <div class="gallery" id="memoryGallery">
-
-            <!-- Photos will be automatically added by JavaScript -->
-
-        </div>
-
-    </section>
-
-
-    <!-- 18 DAYS -->
-
-    <section class="days-section">
-
-        <h2>🌸 18 Days of You</h2>
-
-        <p class="section-subtitle">
-            One little thought for every day leading to your 18th.
-        </p>
-
-        <div class="days-grid" id="daysGrid">
-
-            <!-- JavaScript creates the 18 cards -->
-
-        </div>
-
-    </section>
-
-
-    <!-- FINAL BIRTHDAY -->
-
-    <section class="final-section">
-
-        <div class="final-card">
-
-            <div class="lock" id="lock">
-                🔒
-            </div>
-
-            <h2 id="finalTitle">
-                Something Special Is Waiting...
+            <h2>
+                Are you ready? ❤️
             </h2>
 
-            <p id="finalMessage">
-                Not now BABY ❤️
-            </p>
 
-            <button type="button" id="birthdayButton" onclick="birthdaySurprise()">
-                🎁 Open Surprise
-            </button>
+            <div class="welcome-buttons">
+
+                <button type="button" class="yes-button" onclick="openWebsite()">
+
+                    YES ❤️
+
+                </button>
+
+
+                <button type="button" class="no-button" id="noButton" onclick="notReady()">
+
+                    NO 🙈
+
+                </button>
+
+            </div>
+
+
+            <p id="noMessage" class="no-message">
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- FOOTER -->
 
-    <footer>
+    <!-- =====================================
+         MAIN WEBSITE
+    ====================================== -->
 
-        <p>
-            Made with ❤️ just for you
-        </p>
+    <div id="mainWebsite" class="hidden">
 
-    </footer>
 
+        <!-- Floating hearts -->
+
+        <div class="hearts"></div>
+
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    A little journey through your life...
+                </p>
+
+
+                <h1>
+                    18 Days
+                </h1>
+
+
+                <h2>
+                    18 Years of Srindhi ❤️
+                </h2>
+
+
+                <p class="intro">
+
+                    18 days.
+
+                    <br>
+
+                    18 birthdays.
+
+                    <br>
+
+                    18 little chapters.
+
+                    <br><br>
+
+                    And one very special
+                    18th birthday waiting at the end. 🎂
+
+                </p>
+
+
+                <!-- Countdown -->
+
+                <div class="countdown">
+
+
+                    <div class="time-box">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>
+                            Days
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>
+                            Hours
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>
+                            Minutes
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>
+                            Seconds
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <p class="date">
+                    🎀 October 18, 2026 🎀
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             TODAY'S BIRTHDAY
+        ================================== -->
+
+        <section class="daily-section">
+
+
+            <h2>
+                🎂 Today's Birthday
+            </h2>
+
+
+            <div class="message-card">
+
+
+                <div id="dayNumber">
+                </div>
+
+
+                <h3 id="birthdayYear">
+                    Loading...
+                </h3>
+
+
+                <p id="dailyMessage">
+                    Loading...
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MEMORIES
+        ================================== -->
+
+        <section class="memories">
+
+
+            <h2>
+                📸 Memories of Srinidhi
+            </h2>
+
+
+            <p class="section-subtitle">
+
+                Every day, two more memories
+                from this beautiful journey
+                will be revealed. ❤️
+
+            </p>
+
+
+            <div class="memory-counter">
+
+                <span id="memoryCount">
+                    0
+                </span>
+
+                / 36 memories unlocked
+
+            </div>
+
+
+            <div class="gallery" id="memoryGallery">
+
+                <!-- JavaScript adds photos -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             18 BIRTHDAYS
+        ================================== -->
+
+        <section class="days-section">
+
+
+            <h2>
+                🌸 18 Birthdays of Srinidhi
+            </h2>
+
+
+            <p class="section-subtitle">
+
+                One birthday.
+                One year.
+                One little chapter.
+
+            </p>
+
+
+            <div class="days-grid" id="daysGrid">
+
+                <!-- JavaScript creates cards -->
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             FINAL SURPRISE
+        ================================== -->
+
+        <section class="final-section">
+
+
+            <div class="final-card">
+
+
+                <div class="lock" id="lock">
+
+                    🔒
+
+                </div>
+
+
+                <h2 id="finalTitle">
+
+                    Something Special Is Waiting...
+
+                </h2>
+
+
+                <p id="finalMessage">
+
+                    Come back on October 18th
+                    for the final chapter. ❤️
+
+                </p>
+
+
+                <button type="button" id="birthdayButton" onclick="birthdaySurprise()">
+
+                    🎁 Open Surprise
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer>
+
+            <p>
+                Made with ❤️ especially for Srinidhi
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- MAIN JAVASCRIPT -->
 
     <script src="script.js"></script>
+
+
+
+    <!-- =====================================
+         OPENING SCREEN FUNCTIONS
+    ====================================== -->
+
+    <script>
+
+
+        function openWebsite() {
+
+            const welcomeScreen =
+                document.getElementById(
+                    "welcomeScreen"
+                );
+
+
+            const mainWebsite =
+                document.getElementById(
+                    "mainWebsite"
+                );
+
+
+            welcomeScreen.style.display =
+                "none";
+
+
+            mainWebsite.classList.remove(
+                "hidden"
+            );
+
+        }
+
+
+
+        function notReady() {
+
+            const message =
+                document.getElementById(
+                    "noMessage"
+                );
+
+
+            const noButton =
+                document.getElementById(
+                    "noButton"
+                );
+
+
+            message.innerText =
+                "Are you sure? 🥺 There are 18 little chapters waiting for you... ❤️";
+
+
+            noButton.innerText =
+                "Maybe YES? 🙈";
+
+        }
+
+
+    </script>
+
 
 </body>
 
