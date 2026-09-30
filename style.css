@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(135deg,
+            #ff9a9e,
+            #fad0c4,
+            #fbc2eb);
+
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.hero-content {
+
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 50px 30px;
+
+    border-radius: 30px;
+
+    max-width: 800px;
+
+    width: 100%;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.small-title {
+
+    color: #ff4d6d;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+
+    font-size: 80px;
+
+    color: #ff4d6d;
+
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.intro {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 35px 0;
+
+    flex-wrap: wrap;
+}
+
+.time-box {
+
+    background: #ff4d6d;
+
+    color: white;
+
+    width: 100px;
+
+    padding: 18px 10px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(255, 77, 109, 0.3);
+}
+
+.time-box span {
+
+    display: block;
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+.time-box small {
+
+    font-size: 13px;
+}
+
+.date {
+
+    color: #ff4d6d;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   DAILY MESSAGE
+========================= */
+
+.daily-section {
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.daily-section h2 {
+
+    color: white;
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+}
+
+.message-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+#dayNumber {
+
+    color: #ff4d6d;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+#dailyMessage {
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memories {
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.memories h2 {
+
+    color: white;
+
+    font-size: 35px;
+}
+
+.section-subtitle {
+
+    color: white;
+
+    margin: 15px 0 35px;
+}
+
+.gallery {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+}
+
+.photo-card {
+
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+
+    transform: translateY(-8px);
+}
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.photo-card p {
+
+    padding: 15px 5px 8px;
+
+    color: #555;
+}
+
+
+/* =========================
+   18 DAYS GRID
+========================= */
+
+.days-section {
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.days-section h2 {
+
+    color: white;
+
+    font-size: 35px;
+}
+
+.days-grid {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 18px;
+}
+
+.day-card {
+
+    background: white;
+
+    padding: 25px 15px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.day-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.day-card .number {
+
+    font-size: 30px;
+
+    color: #ff4d6d;
+
+    font-weight: bold;
+}
+
+.day-card .icon {
+
+    font-size: 30px;
+
+    margin: 10px 0;
+}
+
+.locked {
+
+    opacity: 0.55;
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.final-card {
+
+    background: white;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 50px 30px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.lock {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+}
+
+.final-card h2 {
+
+    color: #ff4d6d;
+
+    margin-bottom: 15px;
+}
+
+.final-card p {
+
+    line-height: 1.7;
+
+    font-size: 18px;
+}
+
+button {
+
+    margin-top: 25px;
+
+    border: none;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    background: #ff4d6d;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.05);
+
+    background: #e63956;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: rgba(0, 0, 0, 0.15);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    font-size: 20px;
+
+    animation:
+        floatHeart 6s linear forwards;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0) rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh) rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .hero h1 {
+
+        font-size: 55px;
+    }
+
+    .hero h2 {
+
+        font-size: 25px;
+    }
+
+    .hero-content {
+
+        padding: 40px 20px;
+    }
+
+    .time-box {
+
+        width: 75px;
+
+        padding: 12px 5px;
+    }
+
+    .time-box span {
+
+        font-size: 25px;
+    }
+
+    .daily-section h2,
+    .memories h2,
+    .days-section h2 {
+
+        font-size: 28px;
+    }
+}
