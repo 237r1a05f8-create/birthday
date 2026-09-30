@@ -374,7 +374,7 @@ function displayMemories() {
         photoCard.innerHTML = `
 
             <img
-                src="photo${photoNumber}.jpg"
+                src="photo${photoNumber}.JPG"
                 alt="Memory ${i}"
                 onerror="this.parentElement.style.display='none';"
             >
