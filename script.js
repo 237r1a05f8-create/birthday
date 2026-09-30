@@ -1,139 +1,135 @@
-/* =================================
-   BIRTHDAY DATE
-================================= */
+/* =====================================
+   IMPORTANT DATES
+===================================== */
 
 const birthday =
-    new Date("October 18, 2026 00:00:00").getTime();
+    new Date(
+        "October 18, 2026 00:00:00"
+    ).getTime();
 
 
-/* =================================
+const startDate =
+    new Date(
+        "October 1, 2026 00:00:00"
+    );
+
+
+
+/* =====================================
    COUNTDOWN
-================================= */
+===================================== */
 
 function updateCountdown() {
 
-    const now = new Date().getTime();
+    const now =
+        new Date().getTime();
 
-    const difference = birthday - now;
+
+    const difference =
+        birthday - now;
+
 
     if (difference <= 0) {
 
-        document.getElementById("days").innerText = "00";
-        document.getElementById("hours").innerText = "00";
-        document.getElementById("minutes").innerText = "00";
-        document.getElementById("seconds").innerText = "00";
+        document.getElementById("days")
+            .innerText = "00";
+
+        document.getElementById("hours")
+            .innerText = "00";
+
+        document.getElementById("minutes")
+            .innerText = "00";
+
+        document.getElementById("seconds")
+            .innerText = "00";
+
 
         birthdayUnlocked();
 
         return;
+
     }
 
-    const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-    );
 
-    const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-    );
-
-    const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-    );
-
-    const seconds = Math.floor(
-        (difference / 1000) % 60
-    );
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
 
 
-    document.getElementById("days").innerText =
+    const hours =
+        Math.floor(
+            (difference /
+                (1000 * 60 * 60)) % 24
+        );
+
+
+    const minutes =
+        Math.floor(
+            (difference /
+                (1000 * 60)) % 60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (difference / 1000) % 60
+        );
+
+
+    document.getElementById("days")
+        .innerText =
         String(days).padStart(2, "0");
 
-    document.getElementById("hours").innerText =
+
+    document.getElementById("hours")
+        .innerText =
         String(hours).padStart(2, "0");
 
-    document.getElementById("minutes").innerText =
+
+    document.getElementById("minutes")
+        .innerText =
         String(minutes).padStart(2, "0");
 
-    document.getElementById("seconds").innerText =
+
+    document.getElementById("seconds")
+        .innerText =
         String(seconds).padStart(2, "0");
+
 }
 
 
-setInterval(updateCountdown, 1000);
+setInterval(
+    updateCountdown,
+    1000
+);
+
 
 updateCountdown();
 
 
 
-/* =================================
-   18 DAILY MESSAGES
-================================= */
-
-const messages = [
-
-    "18 days to go! And this is only the beginning. ❤️",
-
-    "Your smile has a way of making ordinary moments special. 😊",
-
-    "Today is another little reminder of how special you are. 🌸",
-
-    "Some people make life brighter simply by being themselves. ✨",
-
-    "Another day, another memory worth keeping. ❤️",
-
-    "I hope you always remember how special you are. 💕",
-
-    "One week closer to your special day! 🎂",
-
-    "Another day and another reason to celebrate you. 🌷",
-
-    "Your happiness deserves to be celebrated every day. ❤️",
-
-    "10 days down! We're getting closer! 🎉",
-
-    "I hope this little countdown makes you smile today. 😊",
-
-    "Here's to all the memories we've made and the ones still waiting. ✨",
-
-    "Your 18th chapter is almost here. Make it beautiful. 🌸",
-
-    "Only a few more days until your special day! ❤️",
-
-    "Your birthday is almost here! 🎂",
-
-    "Just two more days until the final countdown! 💖",
-
-    "TOMORROW! Your 18th birthday is almost here! 🎉",
-
-    "HAPPY 18TH BIRTHDAY! 🎂❤️ Today is your day!"
-];
-
-
-
-/* =================================
-   GET CURRENT DAY
-================================= */
+/* =====================================
+   FIND CURRENT BIRTHDAY YEAR
+===================================== */
 
 function getCurrentDay() {
-
-    const startDate =
-        new Date("October 1, 2026 00:00:00");
 
     const today =
         new Date();
 
+
     const difference =
         today - startDate;
 
+
     let day =
         Math.floor(
-            difference / (1000 * 60 * 60 * 24)
+            difference /
+            (1000 * 60 * 60 * 24)
         ) + 1;
 
-
-    /*
-       Before October 1
-    */
 
     if (day < 1) {
 
@@ -141,10 +137,6 @@ function getCurrentDay() {
 
     }
 
-
-    /*
-       After October 18
-    */
 
     if (day > 18) {
 
@@ -154,23 +146,137 @@ function getCurrentDay() {
 
 
     return day;
+
 }
 
 
 
-/* =================================
-   DAILY MESSAGE
-================================= */
+/* =====================================
+   18 BIRTHDAY MESSAGES
+===================================== */
+
+const birthdayMessages = [
+
+    "Happy 1st Birthday, Srinidhi! 🎂❤️ Today we're celebrating the very beginning of your beautiful journey.",
+
+
+    "Happy 2nd Birthday, Srinidhi! 🎈❤️ Another little year of your story, another chapter worth celebrating.",
+
+
+    "Happy 3rd Birthday, Srinidhi! 🧸🎂 Three years of smiles, laughter, and memories beginning to fill your story.",
+
+
+    "Happy 4th Birthday, Srinidhi! 🌸❤️ Four years already! Every year adds another little piece to the person you are today.",
+
+
+    "Happy 5th Birthday, Srinidhi! 🎂✨ Five years of growing, learning, laughing, and making memories.",
+
+
+    "Happy 6th Birthday, Srinidhi! 🌷❤️ Six years into your journey, and there are still so many beautiful chapters ahead.",
+
+
+    "Happy 7th Birthday, Srinidhi! 🎉😊 Seven years of memories, smiles, and moments that became part of your story.",
+
+
+    "Happy 8th Birthday, Srinidhi! 🎂💖 Eight years of becoming the amazing person you are today.",
+
+
+    "Happy 9th Birthday, Srinidhi! 🌸✨ Nine years down, and your story is only getting more beautiful.",
+
+
+    "Happy 10th Birthday, Srinidhi! 🎉🎂 Welcome to double digits! A whole decade of your beautiful journey.",
+
+
+    "Happy 11th Birthday, Srinidhi! ❤️✨ Another year, another chapter, another collection of memories.",
+
+
+    "Happy 12th Birthday, Srinidhi! 🎂🌷 Twelve years of life, laughter, learning, and growing.",
+
+
+    "Happy 13th Birthday, Srinidhi! 🎉❤️ A new chapter begins, bringing new dreams and new memories.",
+
+
+    "Happy 14th Birthday, Srinidhi! 🌸✨ Fourteen years of your story, and so many more chapters waiting ahead.",
+
+
+    "Happy 15th Birthday, Srinidhi! 🎂💖 Fifteen years of becoming the person you are today.",
+
+
+    "Happy 16th Birthday, Srinidhi! 🎉❤️ Sixteen years, countless memories, and so many moments to treasure.",
+
+
+    "Happy 17th Birthday, Srinidhi! 🌷❤️ One year away from 18. One last chapter before the big milestone.",
+
+
+    "HAPPY 18TH BIRTHDAY, Srinidhi! 🎂🎉❤️ Today we celebrate 18 years, 18 birthdays, countless memories, and the beginning of a brand-new chapter."
+
+];
+
+
+
+/* =====================================
+   SHOW TODAY'S BIRTHDAY
+===================================== */
 
 function showDailyMessage() {
 
-    const day = getCurrentDay();
+    const day =
+        getCurrentDay();
 
-    document.getElementById("dayNumber").innerText =
-        "✨ Day " + day + " of 18 ✨";
 
-    document.getElementById("dailyMessage").innerText =
-        messages[day - 1];
+    document.getElementById(
+        "dayNumber"
+    ).innerText =
+        "✨ Chapter " +
+        day +
+        " of 18 ✨";
+
+
+    document.getElementById(
+        "birthdayYear"
+    ).innerText =
+        "🎂 Happy " +
+        day +
+        getOrdinal(day) +
+        " Birthday, Srinidhi!";
+
+
+    document.getElementById(
+        "dailyMessage"
+    ).innerText =
+        birthdayMessages[day - 1];
+
+}
+
+
+function getOrdinal(number) {
+
+    if (
+        number >= 11 &&
+        number <= 13
+    ) {
+
+        return "th";
+
+    }
+
+
+    switch (number % 10) {
+
+        case 1:
+            return "st";
+
+        case 2:
+            return "nd";
+
+        case 3:
+            return "rd";
+
+        default:
+            return "th";
+
+    }
+
 }
 
 
@@ -178,14 +284,17 @@ showDailyMessage();
 
 
 
-/* =================================
-   18 DAY CARDS
-================================= */
+/* =====================================
+   CREATE 18 BIRTHDAY CARDS
+===================================== */
 
 function createDayCards() {
 
     const grid =
-        document.getElementById("daysGrid");
+        document.getElementById(
+            "daysGrid"
+        );
+
 
     const currentDay =
         getCurrentDay();
@@ -194,12 +303,26 @@ function createDayCards() {
     grid.innerHTML = "";
 
 
-    for (let i = 1; i <= 18; i++) {
+    for (
+        let i = 1;
+        i <= 18;
+        i++
+    ) {
+
 
         const card =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
-        card.classList.add("day-card");
+
+        card.classList.add(
+            "day-card"
+        );
+
+
+        const ordinal =
+            getOrdinal(i);
 
 
         if (i <= currentDay) {
@@ -211,18 +334,26 @@ function createDayCards() {
                 </div>
 
                 <div class="icon">
-                    ❤️
+                    🎂
                 </div>
 
-                <p>
-                    Day ${i} unlocked!
+                <div class="birthday-name">
+                    ${i}${ordinal} Birthday
+                </div>
+
+                <p class="status">
+                    Happy ${i}${ordinal} Birthday,
+                    Srinidhi! ❤️
                 </p>
 
             `;
 
         } else {
 
-            card.classList.add("locked");
+            card.classList.add(
+                "locked"
+            );
+
 
             card.innerHTML = `
 
@@ -234,16 +365,23 @@ function createDayCards() {
                     🔒
                 </div>
 
-                <p>
-                    Waiting for you...
+                <div class="birthday-name">
+                    ${i}${ordinal} Birthday
+                </div>
+
+                <p class="status">
+                    Waiting for this chapter...
                 </p>
 
             `;
+
         }
 
 
         grid.appendChild(card);
+
     }
+
 }
 
 
@@ -251,83 +389,110 @@ createDayCards();
 
 
 
-/* =================================
-   36 MEMORY PHOTOS
-================================= */
+/* =====================================
+   PHOTO CAPTIONS
+===================================== */
 
 const memoryCaptions = [
 
-    "A beautiful moment ❤️",
-    "One of my favorite memories ✨",
+    "A beautiful beginning ❤️",
 
-    "A moment worth remembering 💕",
-    "Your beautiful smile 😊",
+    "One of the earliest memories ✨",
 
-    "Another special memory 🌸",
-    "This one always makes me smile ❤️",
+    "A little moment worth remembering 💕",
 
-    "A memory I'll always cherish 💖",
-    "A beautiful day to remember ✨",
+    "Growing up one memory at a time 🌸",
 
-    "One more reason to smile 😊",
-    "A little moment that means a lot ❤️",
+    "A beautiful chapter 📖",
 
-    "Another chapter of our memories 📖",
+    "Another little piece of the story ❤️",
+
+    "A memory to treasure 💖",
+
     "A moment frozen in time 📸",
 
-    "This memory is special 💕",
-    "One of those unforgettable moments ✨",
+    "Another reason to smile 😊",
 
-    "A memory close to my heart ❤️",
-    "Another beautiful moment 🌷",
+    "A beautiful memory ✨",
 
-    "Something worth remembering forever 💖",
+    "One more chapter of the journey ❤️",
+
+    "A moment worth keeping 💕",
+
+    "Another beautiful memory 🌷",
+
+    "A chapter I'll always remember ❤️",
+
+    "One of those special moments ✨",
+
+    "A memory close to the heart 💖",
+
+    "Another little piece of the journey 📖",
+
     "A smile worth remembering 😊",
 
-    "Another little piece of our story 📖",
-    "One more beautiful memory ❤️",
+    "Another chapter begins ❤️",
 
-    "This moment deserves a place here ✨",
-    "A memory that makes me happy 💕",
+    "One more beautiful memory ✨",
 
-    "Another moment I'll never forget ❤️",
-    "A beautiful memory from the journey 🌸",
+    "A moment that deserves to be remembered 💕",
 
-    "Another reason to smile 😊",
-    "One of my favorite moments 💖",
+    "Another reason to smile ❤️",
 
-    "A memory worth keeping forever 📸",
-    "Another special chapter ❤️",
+    "A memory worth keeping forever 🌸",
 
-    "This one means a lot to me ✨",
+    "Another beautiful moment 📸",
+
+    "A chapter filled with memories ❤️",
+
+    "One of the special moments 💖",
+
+    "Another memory to treasure ✨",
+
+    "A beautiful part of the journey 🌷",
+
+    "One more chapter ❤️",
+
     "A moment filled with happiness 💕",
 
-    "Another memory to treasure 🌷",
+    "Another memory worth keeping 📖",
+
     "A beautiful moment in time ❤️",
 
-    "One more memory before your birthday 🎂",
-    "Almost at the final surprise! 💖",
+    "One more memory before the big 18 🎂",
+
+    "Almost at the final chapter 💖",
 
     "One of the last memories before 18 🎉",
-    "36 memories leading to your 18th birthday ❤️"
+
+    "36 memories leading to 18 ❤️"
+
 ];
 
 
 
-/* =================================
+/* =====================================
    DISPLAY MEMORIES
-================================= */
+===================================== */
 
 function displayMemories() {
 
     const gallery =
-        document.getElementById("memoryGallery");
+        document.getElementById(
+            "memoryGallery"
+        );
+
 
     const memoryCount =
-        document.getElementById("memoryCount");
+        document.getElementById(
+            "memoryCount"
+        );
 
 
-    if (!gallery || !memoryCount) {
+    if (
+        !gallery ||
+        !memoryCount
+    ) {
 
         return;
 
@@ -337,16 +502,6 @@ function displayMemories() {
     const currentDay =
         getCurrentDay();
 
-
-    /*
-       2 photos per day
-
-       Day 1  = 2 photos
-       Day 2  = 4 photos
-       Day 3  = 6 photos
-       ...
-       Day 18 = 36 photos
-    */
 
     const photosToShow =
         currentDay * 2;
@@ -361,14 +516,21 @@ function displayMemories() {
         i++
     ) {
 
-        const photoCard =
-            document.createElement("div");
 
-        photoCard.classList.add("photo-card");
+        const photoCard =
+            document.createElement(
+                "div"
+            );
+
+
+        photoCard.classList.add(
+            "photo-card"
+        );
 
 
         const photoNumber =
-            String(i).padStart(2, "0");
+            String(i)
+                .padStart(2, "0");
 
 
         photoCard.innerHTML = `
@@ -376,7 +538,9 @@ function displayMemories() {
             <img
                 src="photo${photoNumber}.JPG"
                 alt="Memory ${i}"
-                onerror="this.parentElement.style.display='none';"
+                onerror="
+                    this.parentElement.style.display='none';
+                "
             >
 
             <p>
@@ -386,12 +550,16 @@ function displayMemories() {
         `;
 
 
-        gallery.appendChild(photoCard);
+        gallery.appendChild(
+            photoCard
+        );
+
     }
 
 
     memoryCount.innerText =
         photosToShow;
+
 }
 
 
@@ -399,29 +567,45 @@ displayMemories();
 
 
 
-/* =================================
-   BIRTHDAY SURPRISE
-================================= */
+/* =====================================
+   FINAL BIRTHDAY UNLOCK
+===================================== */
 
 function birthdayUnlocked() {
 
-    document.getElementById("lock").innerText =
-        "🎉";
+    document.getElementById(
+        "lock"
+    ).innerText = "🎉";
 
 
-    document.getElementById("finalTitle").innerText =
-        "Happy 18th Birthday! 🎂❤️";
+    document.getElementById(
+        "finalTitle"
+    ).innerText =
+        "Happy 18th Birthday, Srinidhi! 🎂❤️";
 
 
-    document.getElementById("finalMessage").innerText =
-        "Today is your day. May your 18th year be filled with happiness, beautiful memories, dreams coming true, and lots of reasons to smile. ❤️";
+    document.getElementById(
+        "finalMessage"
+    ).innerText =
+
+        "Today marks the beginning of a brand-new chapter. " +
+        "18 years, 18 birthdays, countless memories, " +
+        "and so many more beautiful moments ahead. " +
+        "Happy 18th Birthday, Srinidhi! ❤️";
 
 
-    document.getElementById("birthdayButton").innerText =
+    document.getElementById(
+        "birthdayButton"
+    ).innerText =
         "🎁 Open Your Birthday Surprise";
+
 }
 
 
+
+/* =====================================
+   FINAL SURPRISE BUTTON
+===================================== */
 
 function birthdaySurprise() {
 
@@ -440,129 +624,205 @@ function birthdaySurprise() {
     }
 
 
-    document.getElementById("finalMessage").innerHTML = `
+    document.getElementById(
+        "finalMessage"
+    ).innerHTML = `
 
-        🎂 HAPPY 18TH BIRTHDAY! 🎂
-
-        <br><br>
-
-        You made it to 18! ❤️
+        🎂 HAPPY 18TH BIRTHDAY, Srinidhi! 🎂
 
         <br><br>
 
-        This little website was made especially
-        for you because you deserve something
-        as special as you are.
+        18 years.
+
+        <br>
+
+        18 birthdays.
+
+        <br>
+
+        Countless memories.
 
         <br><br>
 
-        Keep smiling, keep dreaming,
-        and make this new chapter amazing. ✨
+        And today begins
+        a brand-new chapter. ❤️
+
+        <br><br>
+
+        I hope your 18th year brings
+        you happiness, beautiful memories,
+        exciting dreams, and many reasons
+        to smile.
+
+        <br><br>
+
+        ✨ HAPPY 18TH! ✨
 
     `;
 
 
     createConfetti();
+
 }
 
 
 
-/* =================================
+/* =====================================
    FLOATING HEARTS
-================================= */
+===================================== */
 
 function createHeart() {
 
     const heart =
-        document.createElement("div");
+        document.createElement(
+            "div"
+        );
 
 
-    heart.classList.add("heart");
+    heart.classList.add(
+        "heart"
+    );
 
 
-    const heartTypes =
-        ["❤️", "💕", "💖", "💗", "💓"];
+    const heartTypes = [
+
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💓"
+
+    ];
 
 
     heart.innerHTML =
         heartTypes[
         Math.floor(
-            Math.random() * heartTypes.length
+            Math.random() *
+            heartTypes.length
         )
         ];
 
 
     heart.style.left =
-        Math.random() * 100 + "vw";
+        Math.random() * 100 +
+        "vw";
 
 
     heart.style.fontSize =
-        (15 + Math.random() * 25) + "px";
+        (
+            15 +
+            Math.random() * 25
+        ) +
+        "px";
 
 
-    document.body.appendChild(heart);
+    document.body.appendChild(
+        heart
+    );
 
 
-    setTimeout(() => {
+    setTimeout(
+        () => {
 
-        heart.remove();
+            heart.remove();
 
-    }, 6000);
+        },
+        6000
+    );
+
 }
 
 
-setInterval(createHeart, 500);
+setInterval(
+    createHeart,
+    500
+);
 
 
 
-/* =================================
+/* =====================================
    CONFETTI
-================================= */
+===================================== */
 
 function createConfetti() {
 
-    for (let i = 0; i < 80; i++) {
+    for (
+        let i = 0;
+        i < 80;
+        i++
+    ) {
+
 
         const piece =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
-        piece.innerHTML = "🎉";
+        piece.innerHTML =
+            "🎉";
 
 
-        piece.style.position = "fixed";
+        piece.style.position =
+            "fixed";
+
 
         piece.style.left =
-            Math.random() * 100 + "vw";
+            Math.random() * 100 +
+            "vw";
 
-        piece.style.top = "-20px";
+
+        piece.style.top =
+            "-20px";
+
 
         piece.style.fontSize =
-            (15 + Math.random() * 20) + "px";
+            (
+                15 +
+                Math.random() * 20
+            ) +
+            "px";
 
-        piece.style.zIndex = "9999";
+
+        piece.style.zIndex =
+            "9999";
+
 
         piece.style.transition =
             "transform 3s linear, opacity 3s";
 
 
-        document.body.appendChild(piece);
+        document.body.appendChild(
+            piece
+        );
 
 
-        setTimeout(() => {
+        setTimeout(
+            () => {
 
-            piece.style.transform =
-                `translateY(110vh) rotate(720deg)`;
-
-            piece.style.opacity = "0";
-
-        }, 100);
+                piece.style.transform =
+                    `translateY(110vh)
+                     rotate(720deg)`;
 
 
-        setTimeout(() => {
+                piece.style.opacity =
+                    "0";
 
-            piece.remove();
+            },
+            100
+        );
 
-        }, 3500);
+
+        setTimeout(
+            () => {
+
+                piece.remove();
+
+            },
+            3500
+        );
+
     }
+
 }
