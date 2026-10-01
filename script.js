@@ -401,7 +401,7 @@ const memoryCaptions = [
 
     "A little moment worth remembering 💕",
 
-    "Growing up one memory at a time 🌸",
+    "A beautiful little soul, long before I ever knew her. ❤️",
 
     "A beautiful chapter 📖",
 
