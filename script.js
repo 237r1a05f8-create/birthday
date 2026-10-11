@@ -451,7 +451,7 @@ const memoryCaptions = [
 
     "A beautiful part of the journey 🌷",
 
-    "One more chapter ❤️",
+    " MY Angle  ❤️",
 
     "A moment filled with happiness 💕",
 
