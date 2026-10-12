@@ -395,77 +395,77 @@ createDayCards();
 
 const memoryCaptions = [
 
-    "A beautiful beginning ❤️",
+    "A beautiful beginning ❤️",//1
 
-    "One of the earliest memories ✨",
+    "One of the earliest memories ✨",//2
 
-    "A little moment worth remembering 💕",
+    "A little moment worth remembering 💕",//3
 
-    "A beautiful little soul, long before I ever knew her. ❤️",
+    "A beautiful little soul, long before I ever knew her. ❤️",//4
 
-    "A beautiful chapter 📖",
+    "A beautiful chapter 📖",//5
 
-    "Another little piece of the story ❤️",
+    "Another little piece of the story ❤️",//6
 
-    "A memory to treasure 💖",
+    "A memory to treasure 💖",//7
 
-    "A moment frozen in time 📸",
+    "A moment frozen in time 📸",//8
 
-    "Another reason to smile 😊",
+    "Another reason to smile 😊",//9
 
-    "A beautiful memory ✨",
+    "A beautiful memory ✨",//10
 
-    "One more chapter of the journey ❤️",
+    "One more chapter of the journey ❤️",//11
 
-    "A moment worth keeping 💕",
+    "A moment worth keeping 💕",//12
 
-    "Another beautiful memory 🌷",
+    "Another beautiful memory 🌷",//13
 
-    "A chapter I'll always remember ❤️",
+    "A chapter I'll always remember ❤️",//14
 
-    "One of those special moments ✨",
+    "One of those special moments ✨",//15
 
-    "A memory close to the heart 💖",
+    "A memory close to the heart 💖",//16
 
-    "Another little piece of the journey 📖",
+    "Another little piece of the journey 📖",//17
 
-    "A smile worth remembering 😊",
+    "A smile worth remembering 😊",//18
 
-    "Another chapter begins ❤️",
+    "Another chapter begins ❤️",//19
 
-    "One more beautiful memory ✨",
+    "One more beautiful memory ✨",//20
 
-    "A moment that deserves to be remembered 💕",
+    "A moment that deserves to be remembered 💕",//21
 
-    "Another reason to smile ❤️",
+    "Another reason to smile ❤️",//22
 
-    "A memory worth keeping forever 🌸",
+    "A memory worth keeping forever 🌸",//23
 
-    "Another beautiful moment 📸",
+    "Another beautiful moment 📸",//24
 
-    "A chapter filled with memories ❤️",
+    "A chapter filled with memories ❤️",//25
 
-    "One of the special moments 💖",
+    "One of the special moments 💖",//26
 
-    "Another memory to treasure ✨",
+    "Another memory to treasure ✨",//27
 
-    "A beautiful part of the journey 🌷",
+    "A beautiful part of the journey 🌷",//28
 
-    " MY Angle  ❤️",
+    " My Angle ❤️",//29
 
-    "A moment filled with happiness 💕",
+    "A moment filled with happiness 💕",//30
 
-    "Another memory worth keeping 📖",
+    "Another memory worth keeping 📖",//31
 
-    "A beautiful moment in time ❤️",
+    "A beautiful moment in time ❤️",//32
 
-    "One more memory before the big 18 🎂",
+    "One more memory before the big 18 🎂",//33
 
-    "Almost at the final chapter 💖",
+    "Almost at the new chapter 💖",//34
 
-    "One of the last memories before 18 🎉",
+    "One of the last memories before 18 🎉",//35
 
-    "36 memories leading to 18 ❤️"
+    "36 memories leading to 18 ❤️"//36
 
 ];
 
@@ -572,97 +572,132 @@ displayMemories();
 ===================================== */
 
 function birthdayUnlocked() {
+    document.getElementById("lock").innerText = "🎉";
 
-    document.getElementById(
-        "lock"
-    ).innerText = "🎉";
-
-
-    document.getElementById(
-        "finalTitle"
-    ).innerText =
+    document.getElementById("finalTitle").innerText =
         "Happy 18th Birthday, Srinidhi! 🎂❤️";
 
-
-    document.getElementById(
-        "finalMessage"
-    ).innerText =
-
+    document.getElementById("finalMessage").innerText =
         "Today marks the beginning of a brand-new chapter. " +
-        "18 years, 18 birthdays, countless memories, " +
-        "and so many more beautiful moments ahead. " +
-        "Happy 18th Birthday, Srinidhi! ❤️";
+        "18 birthdays, countless memories, and many more " +
+        "beautiful moments ahead. Happy Birthday, Srinidhi! ❤️";
 
-
-    document.getElementById(
-        "birthdayButton"
-    ).innerText =
+    document.getElementById("birthdayButton").innerText =
         "🎁 Open Your Birthday Surprise";
-
 }
-
-
 
 /* =====================================
    FINAL SURPRISE BUTTON
 ===================================== */
 
 function birthdaySurprise() {
+    const today = new Date();
+    const isBirthday =
+        today.getFullYear() === 2026 &&
+        today.getMonth() === 9 && // October is month 9
+        today.getDate() === 18;
 
-    const now =
-        new Date().getTime();
-
-
-    if (now < birthday) {
-
-        alert(
-            "Not yet! 😜 Come back on October 18th ❤️"
-        );
-
+    if (!isBirthday) {
+        alert("Your birthday surprise unlocks on October 18! 🎂");
         return;
-
     }
 
+    const surprise = document.getElementById("surpriseContent");
 
-    document.getElementById(
-        "finalMessage"
-    ).innerHTML = `
+    if (surprise) {
+        surprise.classList.remove("hidden");
+    }
 
-        🎂 HAPPY 18TH BIRTHDAY, Srinidhi! 🎂
+    document.getElementById("lock").innerText = "🎉";
 
+    document.getElementById("finalTitle").innerText =
+        "Happy 18th Birthday, Srinidhi! 🎂❤️";
+
+    document.getElementById("finalMessage").innerHTML = `
+        🎂 HAPPY 18TH BIRTHDAY, SRINIDHI! 🎂
         <br><br>
-
-        18 years.
-
-        <br>
-
-        18 birthdays.
-
-        <br>
-
-        Countless memories.
-
+        18 birthdays. Countless memories.
         <br><br>
-
-        And today begins
-        a brand-new chapter. ❤️
-
+        May this new chapter bring you happiness,
+        exciting opportunities, beautiful memories,
+        and many reasons to smile.
         <br><br>
-
-        I hope your 18th year brings
-        you happiness, beautiful memories,
-        exciting dreams, and many reasons
-        to smile.
-
-        <br><br>
-
-        ✨ HAPPY 18TH! ✨
-
+        ✨ HAPPY BIRTHDAY! ✨
     `;
 
+    document.getElementById("birthdayButton").innerText =
+        "🎉 Your Surprise Is Open!";
+
+    document.getElementById("birthdayButton").disabled = true;
+
+    createThingsList();
+    createConfetti();
+}
+
+
+/* =====================================
+   18 POSITIVE THINGS ABOUT SRINIDHI
+===================================== */
+
+function createThingsList() {
+    const list = document.getElementById("thingsList");
+
+    if (!list || list.dataset.created === "true") {
+        return;
+    }
+
+    const things = [
+        "Your kindness",
+        "Your smile",
+        "Your laughter",
+        "Your creativity",
+        "Your unique personality",
+        "Your courage",
+        "Your curiosity",
+        "Your positive spirit",
+        "Your thoughtfulness",
+        "Your determination",
+        "Your sense of humor",
+        "Your ability to learn",
+        "Your helpful nature",
+        "Your dreams",
+        "Your enthusiasm",
+        "Your individuality",
+        "Your strength to keep growing",
+        "The wonderful person you are"
+    ];
+
+    list.innerHTML = "";
+
+    things.forEach((thing, index) => {
+        const item = document.createElement("div");
+        item.classList.add("thing-item");
+        item.innerText = `${index + 1}. ${thing}`;
+        list.appendChild(item);
+    });
+
+    list.dataset.created = "true";
+}
+
+/* =====================================
+   INTERACTIVE BIRTHDAY CAKE
+===================================== */
+
+function celebrateCake() {
+    const message = document.getElementById("cakeMessage");
+
+    if (message) {
+        message.innerText =
+            "🎉 Make a wish, Srinidhi! Happy Birthday! 🎂✨";
+    }
+
+    const cake = document.getElementById("cake");
+
+    if (cake) {
+        cake.classList.add("cake-celebrating");
+    }
 
     createConfetti();
-
 }
 
 
@@ -741,88 +776,45 @@ setInterval(
 
 
 
+
 /* =====================================
-   CONFETTI
+   CONFETTI CELEBRATION
 ===================================== */
 
 function createConfetti() {
+    const container = document.getElementById("confettiContainer");
 
-    for (
-        let i = 0;
-        i < 80;
-        i++
-    ) {
-
-
-        const piece =
-            document.createElement(
-                "div"
-            );
-
-
-        piece.innerHTML =
-            "🎉";
-
-
-        piece.style.position =
-            "fixed";
-
-
-        piece.style.left =
-            Math.random() * 100 +
-            "vw";
-
-
-        piece.style.top =
-            "-20px";
-
-
-        piece.style.fontSize =
-            (
-                15 +
-                Math.random() * 20
-            ) +
-            "px";
-
-
-        piece.style.zIndex =
-            "9999";
-
-
-        piece.style.transition =
-            "transform 3s linear, opacity 3s";
-
-
-        document.body.appendChild(
-            piece
-        );
-
-
-        setTimeout(
-            () => {
-
-                piece.style.transform =
-                    `translateY(110vh)
-                     rotate(720deg)`;
-
-
-                piece.style.opacity =
-                    "0";
-
-            },
-            100
-        );
-
-
-        setTimeout(
-            () => {
-
-                piece.remove();
-
-            },
-            3500
-        );
-
+    if (!container) {
+        return;
     }
 
+    const colors = [
+        "#ff4d6d",
+        "#ffb703",
+        "#fbc2eb",
+        "#a8dadc",
+        "#cdb4db",
+        "#ffd166"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+        const piece = document.createElement("div");
+
+        piece.classList.add("confetti-piece");
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.animationDelay = Math.random() * 1.5 + "s";
+        piece.style.animationDuration = 3 + Math.random() * 2 + "s";
+        piece.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        container.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 6500);
+    }
 }
