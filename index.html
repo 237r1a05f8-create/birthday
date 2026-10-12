@@ -326,40 +326,162 @@
 
         <section class="final-section">
 
-
             <div class="final-card">
 
-
-                <div class="lock" id="lock">
-
-                    🔒
-
-                </div>
-
+                <div class="lock" id="lock">🔒</div>
 
                 <h2 id="finalTitle">
-
                     Something Special Is Waiting...
-
                 </h2>
 
-
                 <p id="finalMessage">
-
                     Not Now Baby...❤️😚
-
                 </p>
 
-
                 <button type="button" id="birthdayButton" onclick="birthdaySurprise()">
-
                     🎁 Open Surprise
-
                 </button>
 
+                <!-- NEW: Final birthday surprise -->
+                <div id="surpriseContent" class="hidden">
+
+                    <div class="surprise-divider"></div>
+
+                    <!-- Birthday greeting -->
+                    <div class="final-birthday-greeting">
+                        <div class="birthday-emoji">🎉🎂🎉</div>
+
+                        <h2>Happy 18th Birthday, Srinidhi! ❤️</h2>
+
+                        <p>
+                            May your special day be filled with happiness,
+                            laughter, wonderful memories, and exciting
+                            new beginnings. Have an amazing birthday! 🌸✨
+                        </p>
+                    </div>
+
+                    <!-- Interactive cake -->
+                    <div class="surprise-card cake-card">
+                        <h3>🎂 Make a Birthday Wish!</h3>
+
+                        <p>Tap the cake and make a wish! ✨</p>
+
+                        <button type="button" class="birthday-cake" id="cake"
+                            aria-label="Birthday cake. Tap to celebrate." onclick="celebrateCake()">
+
+                            <span class="cake-candles">
+                                <span class="candle">
+                                    <span class="flame"></span>
+                                </span>
+
+                                <span class="candle">
+                                    <span class="flame"></span>
+                                </span>
+
+                                <span class="candle">
+                                    <span class="flame"></span>
+                                </span>
+                            </span>
+
+                            <span class="cake-top"></span>
+                            <span class="cake-middle"></span>
+                            <span class="cake-bottom"></span>
+
+                        </button>
+
+                        <p id="cakeMessage">
+                            Your special wish starts here! 💖
+                        </p>
+                    </div>
+
+                    <!-- Birthday letter -->
+                    <div class="surprise-card letter-card">
+                        <h3>💌 A Little Birthday Letter</h3>
+
+                        <p>Dear Srinidhi,</p>
+
+                        <p>
+                            Happy Birthday! 🎂❤️ I hope your special day
+                            is filled with happiness, laughter, lovely
+                            surprises, and everything that makes you smile.
+                        </p>
+
+                        <p>
+                            May you keep discovering new things, chasing
+                            your dreams, learning, growing, and creating
+                            wonderful memories. Always believe in yourself
+                            and keep shining in your own way. ✨
+                        </p>
+
+                        <p>
+                            Wishing you success, happiness, good health,
+                            and lots of exciting opportunities in the
+                            journey ahead. Have the happiest birthday ever! 🎉
+                        </p>
+
+                        <p class="letter-signature">
+                            With lots of best wishes, ❤️
+                        </p>
+                    </div>
+
+                    <!-- Special photo -->
+                    <div class="surprise-card special-memory">
+                        <h3>📸 A Special Memory</h3>
+
+                        <p>One extra photo to make this day special. 🌸</p>
+
+                        <img class="special-photo" id="specialPhoto" src="special-photo.JPG"
+                            alt="Srinidhi's special birthday memory" onerror="this.style.display='none';
+                    document.getElementById('photoFallback')
+                    .classList.remove('hidden');">
+
+                        <p id="photoFallback" class="hidden">
+                            Add your chosen photo to the project folder
+                            and name it <strong>special-photo.JPG</strong>.
+                        </p>
+                    </div>
+
+                    <!-- 18 positive things -->
+                    <div class="surprise-card">
+                        <h3>🌟 18 Wonderful Things About You</h3>
+
+                        <p class="things-intro">
+                            Eighteen lovely qualities worth celebrating. 💕
+                        </p>
+
+                        <div id="thingsList" class="things-list">
+                            <!-- JavaScript adds the 18 things -->
+                        </div>
+                    </div>
+
+                    <!-- Final greeting -->
+                    <div class="final-wish">
+                        <div class="final-wish-emoji">💖✨🎉</div>
+
+                        <h2>Here's to Your Beautiful Journey Ahead!</h2>
+
+                        <p>
+                            May your days be filled with laughter, your
+                            dreams keep growing, and your future bring
+                            countless reasons to celebrate.
+                        </p>
+
+                        <p>
+                            Keep smiling, keep shining, and keep creating
+                            wonderful memories.
+                        </p>
+
+                        <h3>Happy Birthday, Srinidhi! 🎂❤️</h3>
+
+                        <p class="final-signature">
+                            Made especially for you ❤️
+                        </p>
+                    </div>
+
+                </div>
+                <!-- END: Final birthday surprise -->
 
             </div>
-
 
         </section>
 
@@ -379,6 +501,9 @@
 
 
     </div>
+    <!-- NEW: Celebration animation containers -->
+    <div id="confettiContainer" class="confetti-container"></div>
+    <div id="heartsContainer" class="hearts-container"></div>
 
 
 
